@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    
+    <link rel="stylesheet" href="../css/prototype.css">
+
+    <script defer src="../javascript/prototype.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> -->
+    
+</head>
+<body>
+    <script src="../javascript/click-effect.js"></script>
+    <header>
+        <div class="header-container">
+            <div class="image-container">
+                <a href="topics.html">
+                    <img src="../images/back_icon.png" alt="Back" title="Back" class="back-icon-pic">
+                </a>
+            </div>
+            <div class="nav">
+                <h1>Flashcards</h1>
+
+                <div class="header-links">
+                    <ul>
+                        <li><a href="#" onclick="showorhideIframe()" title="Open ">Code &lt;&gt;</a></li>
+                        <li><a href="topics.html">Topics</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+
+                <div class="user-progress">
+                    <p class="name"><span id="username" title="Profile">Alvin Thosatria's</span> Progress</p>
+                    <div class="progressbar">
+                        <div class="progressbar-cover">
+                            <div class="progressbar-fill">
+                                <p id="XP">
+                                    0/100XP
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="buttons">
+                    <!--Only show this for teachers (know from the sign in account) so that students cannot add or delete any cards-->
+                    <button onclick="showCreateCardBox()">New Card</button> 
+                    <button onclick="delFlashcards()">Del Cards</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--https://trinket.io/embed/python/3d8d7ce66b-->
+    <div class="container">
+        <iframe src="https://pythontutor.com/visualize.html#mode=edit" allowfullscreen></iframe>
+        <div class="theContent">
+            <div class="create-box">
+                <h2 style="text-align: center; color: black;">Create Question</h2>
+                <label for="question">Question</label>
+                <textarea id="question"></textarea>
+                <br>
+
+                <div id="choices-container">
+                    <label>Total Answer Choices: &nbsp;</label>
+
+                    <div class="choices">
+                        <p>2</p>
+                        <input type="radio" value="2" id="choice1" name="choices" onchange="handleChange(this);">
+                        <p>4</p>
+                        <input type="radio" value="4" id="choice2" name="choices" onchange="handleChange(this);">
+                        <p>6</p>
+                        <input type="radio" value="6" id="choice3" name="choices" onchange="handleChange(this);">
+                    </div>
+                    
+                </div>
+
+                <label for="answer">Answer</label>
+                <input type="text" id="answer" placeholder="Input the correct answer">
+                <div id="answer-type">
+                    
+                </div>
+                
+                
+                <div class="create-box-buttons">
+                    <div class="save-close-buttons">
+                        <button onclick="addFlashcard()">Save</button>
+                        <button onclick="hideCreateBox()">Close</button>
+                    </div>
+                    
+                    <div class="question-type">
+                        <!-- <button onclick="showMcqCardBox()">MCQ</button> -->
+                        <!-- <button onclick="showCodeRunnerBox()">Code runner</button> -->
+                    </div>
+                </div>
+            </div>
+
+        <!--Create the flashcard dynamically from the javascript-->
+            <div class="flashcards"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#" onclick="showorhideIframe()">Code &lt;&gt;</a></li>
+                <li><a href="#">Topics</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

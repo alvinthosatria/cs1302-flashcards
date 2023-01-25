@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap');
+
+$azure: #4B8BBE;
+$laplazul: #306998;
+$shandy: #FFE873;
+$sunglow: #FFD43B;
+$granite: #646464;
+
+body {
+    background: linear-gradient(to right, $azure, $laplazul);
+    font-family: Open Sans;
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 1;
+        width: 0;
+        height: 0;
+    }
+
+    to {
+        opacity: 0;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.container span {
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    animation: scaleUp 0.7s ease forwards;
+}
+
+@keyframes bounce {
+    0% {transform: scale(1,1) translate(0em, 0em);}
+    30% {transform: scale(1,0.8) translate(0em, .7em);}
+    75% {transform: scale(1,1) translate(0em, -.85em);}
+    100% {transform: scale(1,1) translate(0em, 0em);}
+}
+
+.navbar {
+    width: 60%;
+    border: lightgray;
+    margin: auto;
+    height: 50px;
+    position: relative;
+    background: $laplazul;
+    border-radius: 5px;
+    box-shadow: 0 2px 3 px 0 rgba(0,0,0,0.1);
+    display: flex;
+
+    a {
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        line-height: 50px;
+        z-index: 1;
+        font-size: 1em;
+        text-align: center;
+        transition: .5s ease-in-out;
+    }
+
+    a:hover {
+        color: black;
+        transition: .5s ease-in-out;
+    }
+
+    .animation {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: 0;
+        background: $sunglow;
+        border-radius: 5px;
+        transition: .5s ease-in-out 0s;
+    }
+
+
+    a:nth-child(1) {
+        width: 33%;
+    }
+
+    .navbar .start-home, a:nth-child(1):hover~.animation {
+        width: 33%;
+        left: 0;
+        transition: .5s ease-in-out 0s;
+    }
+
+    a:nth-child(2) {
+        width: 33%;
+    }
+    
+    .navbar .start-home, a:nth-child(2):hover~.animation {
+        width: 33%;
+        left: 33%;
+        transition: .5s ease-in-out 0s;
+    }
+
+    a:nth-child(3) {
+        width: 34%;
+    }
+    
+    .navbar .start-home, a:nth-child(3):hover~.animation {
+        width: 34%;
+        left: 66%;
+        transition: .5s ease-in-out 0s;
+    }
+    
+}
+
+
+@media only screen and (max-width: 820px) {
+    body {
+        background: linear-gradient(to right, $azure, $laplazul);
+        overflow: visible;
+    }
+
+    .animation {
+        display: none;
+    }
+
+    .navbar {
+        height: 100vh;
+        background: $sunglow;
+        flex-direction: column;
+        font-size: 1em;
+        margin: 0;
+        justify-content: space-evenly;
+        width: 20vw;
+
+        a {
+            width: 100% !important;
+        }
+
+        a:hover {
+            color: black;
+            transition: .5s ease-in-out;
+        }
+
+        a:active {
+            color: black;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    body {
+        background: linear-gradient(to bottom, $azure, $laplazul);
+        overflow: visible;
+    }
+
+    .navbar {
+        display: none;
+
+        a:hover {
+            color: $shandy;
+        }
+    }
+
+    .animation {
+        display: none;
+    }
+}

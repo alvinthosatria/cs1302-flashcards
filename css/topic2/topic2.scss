@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap');
+
+$azure: #4B8BBE;
+$laplazul: #306998;
+$shandy: #FFE873;
+$sunglow: #FFD43B;
+$granite: #646464;
+
+
+.flashcard-content {
+    padding-top: 1em;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    position: absolute;
+    align-items: center;
+    margin: auto;
+    font-family: Open Sans;
+
+    .flashcard-nav-container {
+        clear: both;
+        text-align: center;
+        width: 50%;
+        margin:auto;
+        border-radius: 10%;
+        background: $sunglow;
+    
+        .flashcard-nav {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .create-container {
+        width: 35%;
+        margin-top: 1.5em;
+
+        .create-box {
+            background: $sunglow;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px 0 black;
+            padding: 1em;
+
+            h2 {
+                text-align: center;
+            }
+
+            textarea {
+                width: 100%;
+                border-radius: 5px;
+                font-family: inherit;
+                border: 1px solid lightgray;
+            }
+
+            button {
+                width: fit-content;
+            }
+        }
+
+        .flashcards {
+            border: solid;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: auto;
+            margin-top: 10px;
+            padding: 0 10px;
+
+            //dimensions
+            width: 370px;
+            height: 400px;
+            word-wrap: break-word;
+            background-color: $shandy;
+            box-shadow: 0 8px 16px 0 black;
+
+            h2 {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+button {
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid lightgray;
+    background-color: $azure;
+    color: whitesmoke;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    background: $laplazul;
+}
+
+@media(max-width: 768px) {
+    .flashcards {
+        margin: auto;
+    }
+
+    .flashcards {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:480px) {
+    .create-box {
+        width: 100%;
+    }
+
+    .flashcard {
+        width: 100%;
+    }
+}
+
+
+
+
+

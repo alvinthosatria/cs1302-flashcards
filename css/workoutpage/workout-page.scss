@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap');
+
+$azure: #4B8BBE;
+$laplazul: #306998;
+$shandy: #FFE873;
+$sunglow: #FFD43B;
+$granite: #646464;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Open Sans;
+}
+
+.flashcard-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    max-width: 80%;
+    background: $sunglow;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 black;
+    flex-direction: column;
+}
+
+#question-container {
+    width: 85%;
+
+    #question {
+        font-size: 1.2rem;
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.btn {
+   background: $azure;
+   color: white;
+   border-radius: 5px;
+   padding: 5px 10px;
+   outline: none;
+   font-size: 1rem;
+}
+
+.btn:hover {
+    background: $laplazul;
+    cursor: pointer;
+}
+
+.btn.correct {
+    background: mediumseagreen;
+    color: black;
+}
+
+.btn.wrong {
+    background: red;
+    color: black;
+}
+
+.start-btn, .next-btn {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap");
+.flashcard-content {
+  padding-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  font-family: Open Sans;
+}
+
+.flashcard-content .flashcard-nav-container {
+  clear: both;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  border-radius: 10%;
+  background: #FFD43B;
+}
+
+.flashcard-content .flashcard-nav-container .flashcard-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flashcard-content .create-container {
+  width: 35%;
+  margin-top: 1.5em;
+}
+
+.flashcard-content .create-container .create-box {
+  background: #FFD43B;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 8px 16px 0 black;
+          box-shadow: 0 8px 16px 0 black;
+  padding: 1em;
+}
+
+.flashcard-content .create-container .create-box h2 {
+  text-align: center;
+}
+
+.flashcard-content .create-container .create-box textarea {
+  width: 100%;
+  border-radius: 5px;
+  font-family: inherit;
+  border: 1px solid lightgray;
+}
+
+.flashcard-content .create-container .create-box button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.flashcard-content .create-container .flashcards {
+  border: solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 0 10px;
+  width: 370px;
+  height: 400px;
+  word-wrap: break-word;
+  background-color: #FFE873;
+  -webkit-box-shadow: 0 8px 16px 0 black;
+          box-shadow: 0 8px 16px 0 black;
+}
+
+.flashcard-content .create-container .flashcards h2 {
+  font-size: 1rem;
+}
+
+button {
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid lightgray;
+  background-color: #4B8BBE;
+  color: whitesmoke;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  background: #306998;
+}
+
+@media (max-width: 768px) {
+  .flashcards {
+    margin: auto;
+  }
+  .flashcards {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-box {
+    width: 100%;
+  }
+  .flashcard {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=topic2.css.map */

@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Open Sans;
+}
+
+.flashcard-container {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 700px;
+  max-width: 80%;
+  background: #FFD43B;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 8px 16px 0 black;
+          box-shadow: 0 8px 16px 0 black;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#question-container {
+  width: 85%;
+}
+
+#question-container #question {
+  font-size: 1.2rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.btn-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.btn {
+  background: #4B8BBE;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: #306998;
+  cursor: pointer;
+}
+
+.btn.correct {
+  background: mediumseagreen;
+  color: black;
+}
+
+.btn.wrong {
+  background: red;
+  color: black;
+}
+
+.start-btn, .next-btn {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hide {
+  display: none;
+}
+/*# sourceMappingURL=workout-page.css.map */

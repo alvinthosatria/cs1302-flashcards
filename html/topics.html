@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alvin Thosatria">
+    <meta name="description" content="CS1302 Flashcards">
+    <title>CS1302 Topics</title>
+    <link rel="stylesheet" href="../css/default/default.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/topicspage/topics.css" type="text/css" media="all">
+    <script>
+         function displayMenu() {
+            let width = window.innerWidth;
+
+            if (width <= 820 && width > 480) {
+                const navbar = document.querySelector('.navbar');
+                navbar.style.cssText = "display: flex; flex-direction: column; justify-content: space-evenly; transition: .5s";
+            } else if (width <= 480) {
+                const navbar = document.querySelector('.navbar');
+                navbar.style.cssText = "display: flex; flex-direction: column; justify-content: space-evenly; height: 25vh; font-size: .35rem";
+            }
+        }
+
+        function hideMenu() {
+            let width = window.innerWidth;
+            if (width <= 820) {
+                const navbar = document.querySelector('.navbar');
+                navbar.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <script src="../javascript/click-effect.js"></script>
+        <img src="../images/hamburger-menu.jpg" alt="Hamburger menu" class="menu-btn" onclick="displayMenu()">
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">Topics</a>
+            <a href="https://www.cs.cityu.edu.hk/~ccha23/cs1302book/cs1302.html" target="_blank">Resources</a>
+
+            <div class="animation start-home">
+            </div>
+        </div>
+
+        <div class="content" onclick="hideMenu()">
+            <div class="text-header">
+                <h2>Select Workout</h2>
+
+                <div class="image-box">
+                    <img src="../images/dumbell.png" alt="dumbell" class="dumbell">
+                </div>
+            </div>
+            
+            <div class="first-row">
+                <div class="topics-container">
+                    <div class="topics">
+                        <a href="topic2.html" class="topic-link">Topic <br> 2</a>
+                    </div>
+                    <p>Pick me!</p>
+                    <div class="sub-topics">
+                        <div class="header3">
+                            <h3>Values and Variables</h3>
+                            <h3>Expressions and Arithmetic</h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="topics-container">
+                    <div class="topics">
+                        <a href="topic3.html" class="topic-link">Topic <br> 3</a>
+                    </div>
+                    <p>Pick me!</p>
+                    <div class="sub-topics">
+                        <div class="header3">
+                            <h3>Conditional execution</h3>
+                            <h3>Iterations</h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="topics-container">
+                    <div class="topics">
+                        <a href="prototype.html" class="topic-link">Topic <br> 4</a>
+                    </div>
+                    <p>Pick me!</p>
+                    <div class="sub-topics">
+                        <div class="header3">
+                            <h3>Using functions</h3>
+                            <h3>Writing functions</h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="topics-container">
+                    <div class="topics">
+                        <a href="prototype.html" class="topic-link">Topic <br> 5</a>
+                    </div>
+                    <p>Pick me!</p>
+                    <div class="sub-topics">
+                        <div class="header3">
+                            <h3>Objects</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="second-row">
+                <div class="topics-container">
+                    <div class="topics">
+                        <a href="topic6.html" class="topic-link">Topic <br> 6</a>
+                    </div>
+                    <p>Pick me!</p>
+                    <div class="sub-topics">
+                        <div class="header3">
+                            <h3>Generator</h3>
+                            <h3>Decorator</h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="topics-container">
+                    <div class="topics">
+                        <a href="topic7.html" class="topic-link">Topic <br> 7</a>
+                    </div>
+                    <p>Pick me!</p>
+                    <div class="sub-topics">
+                        <div class="header3">
+                            <h3>Sequence Types</h3>
+                            <h3>Operations on Sequences</h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="topics-container">
+                    <div class="topics">
+                        <a href="topic8.html" class="topic-link">Topic <br> 8</a>
+                    </div>
+                    <p>Pick me!</p>
+                    <div class="sub-topics">
+                        <div class="header3">
+                            <h3>Dictionaries</h3>
+                            <h3>Sets</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alvin Thosatria">
+    <meta name="description" content="CS1302 Flashcards">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="../css/default/default.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/main/main.css" type="text/css" media="all">
+
+    <script defer src="../javascript/loginform.js"></script>
+
+    <!--Look at jupyterlite and wasm-->
+    <script>
+        function displayMenu() {
+            let width = window.innerWidth;
+
+            if (width <= 820 && width > 480) {
+                const navbar = document.querySelector('.navbar');
+                navbar.style.cssText = "display: flex; flex-direction: column; justify-content: space-evenly; transition: .5s";
+            } else if (width <= 480) {
+                const navbar = document.querySelector('.navbar');
+                navbar.style.cssText = "display: flex; flex-direction: column; justify-content: space-evenly; height: 25vh; font-size: .35rem";
+            }
+        }
+
+        function hideMenu() {
+            let width = window.innerWidth;
+            if (width <= 820) {
+                const navbar = document.querySelector('.navbar');
+                navbar.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <script src="../javascript/click-effect.js"></script>
+
+        <img src="../images/hamburger-menu.jpg" alt="menu" class="menu-btn" onclick="displayMenu()">
+        <div class="navbar">
+            <a href="#" class="navlink">Home</a>
+            <a href="#" class="navlink" onclick="showloginform()">Topics</a>
+            <a href="https://www.cs.cityu.edu.hk/~ccha23/cs1302book/cs1302.html" target="_blank" class="navlink">Resources</a>
+
+            <div class="animation start-home">
+            </div>
+        </div>
+       
+        <div class="content" onclick="hideMenu()">
+            <div class="left-col">
+                <p>Let's Get Started!</p>
+                <h1>CS1302 <br> PYTHON PROGRAMMING</h1>
+                <div class="workout">
+                    <p>Daily Workout</p>
+                    <img src="../images/dumbell.png" alt="Image of dumbell" class="dumbell">
+                </div>
+                
+                <button class="signin-button" onclick="showloginform()">Sign In</button>
+            </div>
+            
+            <div class="right-col-container">
+                <div class="right-col">
+                    <img src="../images/logo.png" class="logo" alt="Image of python logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal">
+            <form method="post" class="modal-content" action="topics.html">
+                <p>Login Here</p>
+                <div class="accountinfo">
+                    <label for="ElectronicID"><b>Electronic ID</b></label>
+                    <input type="text" name="ElectronicID" id="ElectronicID" placeholder="Enter your EID" required>
+    
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    <a href="topics.html" id="login-button-link">
+                        <button type="button" class="loginbtn btn">Login</button> <!--Change type to submit later-->
+                    </a>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <br>
+                <hr>
+                
+                <div class="cancel-login">
+                    <button type="button" class="cancelbtn btn" onclick="closeloginform()">Cancel</button>
+                    <p class="psw">Forgot <a href="https://www.cityu.edu.hk/its/services-facilities/password-reset-and-management" target="_">password?</a></p>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
